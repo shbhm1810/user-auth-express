@@ -8,7 +8,7 @@ const fsPromises = require('fs').promises
 const path = require('path')
 
 const handleNewUser = async (req,res) => {
-    console.log(req.body)
+
     const {user,pwd} = req.body || {};
     if(!user || !pwd)
     return res.status(400).json({"message" : "username and password is required"})
